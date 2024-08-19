@@ -1,0 +1,17 @@
+services:
+  journalbeat:
+    image: docker.elastic.co/beats/journalbeat:7.15.2
+    container_name: journalbeat
+    user: root
+    volumes:
+      - "/var/log/journal:/var/log/journal"
+      - "/etc/machine-id:/etc/machine-id"
+      - "/run/systemd:/run/systemd"
+      - "/etc/hostname:/etc/hostname:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ./config/journalbeat.docker.yml:/usr/share/journalbeat/journalbeat.yml
+    environment:
+      - "output.elasticsearch.hosts=192.168.1.10:9200"
+      - "strict.perms=false"
+    
+
