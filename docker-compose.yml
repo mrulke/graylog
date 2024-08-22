@@ -58,6 +58,8 @@ services:
   graylog:
     image: graylog/graylog:6.0
     container_name: graylog
+    env_file:
+      - stack.env
     environment:
       # CHANGE ME (must be at least 16 characters)!
       GRAYLOG_PASSWORD_SECRET: "somepasswordpepper"

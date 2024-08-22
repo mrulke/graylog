@@ -5,7 +5,7 @@ services:
     user: root
     volumes:
       - "/var/log/journal:/var/log/journal"
-      - "/etc/machine-id:/etc/machine-id"
+      - "/etc/machine-id:/etc/machine-id:ro"
       - "/run/systemd:/run/systemd"
       - "/etc/hostname:/etc/hostname:ro"
       - "/var/run/docker.sock:/var/run/docker.sock"
