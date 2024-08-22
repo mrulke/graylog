@@ -66,7 +66,7 @@ services:
       # Password: admin
       GRAYLOG_ROOT_PASSWORD_SHA2: "be0b9074861d486ca75658529a8260d7c3433977c994d88b76cd3aeac2ccd57"
       GRAYLOG_HTTP_BIND_ADDRESS: "0.0.0.0:9000"
-      GRAYLOG_HTTP_EXTERNAL_URI: "http://localhost:9000/"
+      GRAYLOG_HTTP_EXTERNAL_URI: "http://192.168.1.10:9000/"
       GRAYLOG_ELASTICSEARCH_HOSTS: "http://opensearch:9200"
       GRAYLOG_MONGODB_URI: "mongodb://mongodb:27017/graylog"
       GRAYLOG_TIMEZONE: "Australia/Melbourne"
