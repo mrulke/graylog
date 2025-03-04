@@ -56,7 +56,7 @@ services:
     restart: unless-stopped
 
   graylog:
-    image: graylog/graylog:6.0
+    image: graylog/graylog:6.1
     container_name: graylog
     env_file:
       - stack.env
